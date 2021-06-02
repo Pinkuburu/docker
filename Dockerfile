@@ -1,16 +1,16 @@
 FROM debian:buster-20210408-slim
-ENV VERSION 4.6.2
+ENV VERSION 4.6.21
 ARG TARGETARCH
 
-LABEL name="Weblate"
+LABEL name="Webtrans"
 LABEL version=$VERSION
-LABEL maintainer="Michal Čihař <michal@cihar.com>"
+LABEL maintainer="niuniu <1012803704@qq.com>"
 LABEL org.opencontainers.image.url="https://weblate.org/"
 LABEL org.opencontainers.image.documentation="https://docs.weblate.org/en/latest/admin/install/docker.html"
 LABEL org.opencontainers.image.source="https://github.com/WeblateOrg/docker"
 LABEL org.opencontainers.image.version=$VERSION
-LABEL org.opencontainers.image.vendor="Michal Čihař"
-LABEL org.opencontainers.image.title="Weblate"
+LABEL org.opencontainers.image.vendor="niuniu"
+LABEL org.opencontainers.image.title="Webtrans"
 LABEL org.opencontainers.image.description="A web-based continuous localization system with tight version control integration"
 LABEL org.opencontainers.image.licenses="GPL-3.0-or-later"
 
@@ -116,7 +116,7 @@ RUN \
         -r /usr/src/weblate/requirements.txt \
         "https://github.com/translate/translate/archive/master.zip" \
         "https://github.com/WeblateOrg/language-data/archive/main.zip" \
-        "https://github.com/WeblateOrg/weblate/archive/main.zip#egg=Weblate[all,MySQL]" \
+        "https://github.com/Pinkuburu/weblate/archive/main.zip#egg=Weblate[all,MySQL]" \
         ;; \
     * ) \
       python3 -m pip install \
